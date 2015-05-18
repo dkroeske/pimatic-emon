@@ -55,6 +55,7 @@ module.exports = (env) ->
           description: "Actual power usage"
           type: "number"
           unit: ' Watt'
+          acronym: 'ipu'
         counter:
           description: "Total power used today"
           type: "number"

@@ -4,8 +4,8 @@ module.exports = {
   title: "Emon"
   type: "object"
   properties:
-    option1:
-      description: "Enery monitoring using the blinky led"
-      type: "string"
-      default: "foo"
-}
+    ipu:
+      description: "Instantaneous Power Usage"
+      type: "number"
+      default: 0
+  }
