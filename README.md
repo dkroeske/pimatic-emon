@@ -1,17 +1,44 @@
 pimatic-plugin-template
 =======================
 
-See the [development guide](http://pimatic.org/guide/development/required-skills-readings/) for
-usage.
+Reading the diy Energy Monitoring service called [**emon**](https://github.com/dkroeske/emon-server) and showing values in pimatic. [**emon**](https://github.com/dkroeske/emon-server) is a cheap diy '555 timer chip based circuit' taped to the flashing light of your energy meter (electricity and/or gas), a little bit of Python and a node.js RESTful service. More on **emon** can be found [here](https://github.com/dkroeske/emon-server)
 
-Some Tips:
+![alt tag]
 
-###Adding package dependencies
-* You can add other package dependencies by running `npm install something --save`. With the `--save`
-  option npm will auto add the installed dependency in your `package.json`
-* You can always install all dependencies in the package.json with `npm install`
+v0.1
 
-###Commit your changes to git
-* Add all edited files with `git add file`. For example: `git add package.json` then commit you changes 
-  with `git commit`.
-* After that you can push you commited work to github: `git push`
+Configuration
+-------------
+
+Make sure the files are installed in the *node_modules/pimatic-emon* folder
+
+Add the plugin to the plugin section of your config.json:
+
+```json
+{
+  "plugin": "emon"
+}
+```
+
+Add a device to the devices section:
+
+```json
+{
+  "id": "emon",
+  "class": "EmonDevice",
+  "name": "Electric Energy",
+  "ip": "192.168.2.50",
+  "port": "12345",
+  "username": "testuser",
+  "password": "testpassword",
+  "interval": 5000
+}
+```
+
+ip = IP-address of the emon server (can be on the same Pi but can also be located elsewhere on the W3)
+
+interval = time between readings in milliseconds
+
+have fun!
+
+

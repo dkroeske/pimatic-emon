@@ -1,5 +1,5 @@
 { "name": "pimatic-emon",
-  "description": "Enery monitoring using the blinky led",
+  "description": "Energy monitoring using the blinky led",
   "author": "Diederich Kroeske <dkroeske@gmail.com> (http://d68.nl)",
   "main": "pimatic-emon",
   "files": [
