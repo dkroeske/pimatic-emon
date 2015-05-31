@@ -1,9 +1,9 @@
 pimatic-plugin-template
 =======================
 
-Reading the diy Energy Monitoring service called [**emon**](https://github.com/dkroeske/emon-server) and showing values in pimatic. [**emon**](https://github.com/dkroeske/emon-server) is a cheap diy '555 timer chip based circuit' taped to the flashing light of your energy meter (electricity and/or gas), a little bit of Python and a node.js RESTful service. More on **emon** can be found [here](https://github.com/dkroeske/emon-server)
+Reading the diy Energy Monitoring service called [**emon**](https://github.com/dkroeske/emon-server) and showing values in pimatic. [**emon**](https://github.com/dkroeske/emon-server) is a cheap diy '555 timer chip based circuit' taped to the flashing light of your energy meter (electricity and/or gas), a little bit of Python and a node.js RESTful service. More on [**emon**](https://github.com/dkroeske/emon-server) can be found [here](https://github.com/dkroeske/emon-server)
 
-![alt tag]
+![alt tag](https://github.com/dkroeske/pimatic-emon/blob/master/images/ipu-pimatic.png)
 
 v0.1
 
