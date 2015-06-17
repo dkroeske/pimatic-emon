@@ -23,6 +23,10 @@ module.exports = {
       interval:
         description: "Request interval"
         format: Number
-        default: "100000"      
+        default: "100000" 
+      meterid:
+        description: "E meter identification"
+        format: Number
+        default: ""     
   }
 } 

@@ -57,7 +57,7 @@ module.exports = (env) ->
           unit: ' Watt'
           acronym: 'ipu'
         counter:
-          description: "Total power used today"
+          description: "Last update"
           type: "number"
           unit: ' kWh'
 
@@ -74,6 +74,7 @@ module.exports = (env) ->
         @username = config.username
         @password = config.password
         @interval = config.interval
+        @meterid = config.meterid
 
         super()
 
@@ -146,10 +147,12 @@ module.exports = (env) ->
             else
             # Decode data
               try 
-                data.ipu = (JSON.parse body)[0].ipu
+                for item in (JSON.parse body)
+                  if item.meterid == @meterid
+                    data.ipu = item.ipu
                 
-                @emit "ipu", Number data.ipu
-                @emit "counter", Number data.counter
+                    @emit "ipu", Number data.ipu
+                    @emit "counter", Number data.counter
               
               catch e
                 env.logger.error("fetchData: Error parsing JSON")
