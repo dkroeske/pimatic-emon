@@ -31,7 +31,8 @@ Add a device to the devices section:
   "port": "12345",
   "username": "testuser",
   "password": "testpassword",
-  "interval": 5000
+  "interval": 5000,
+  "meterid": 27
 }
 ```
 
@@ -42,3 +43,4 @@ interval = time between readings in milliseconds
 have fun!
 
 * 0.2.0 Initial release
+* 0.3.0 Added meter identifier (meter id), added 'device-config-schema.coffee' to package.json
